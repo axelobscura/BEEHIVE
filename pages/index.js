@@ -91,10 +91,11 @@ export default function Home() {
       />
       <Link href='/quienes-somos'>
         <Image
-          src="images/logo.png"
+          src="/images/logo.png"
           alt="BEEHIVE WORKS | OUTSTANDING TECH"
           width={500}
           height={142}
+          className={styles.shaker}
         />
       </Link>
     </Layout>
