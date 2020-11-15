@@ -17,6 +17,7 @@ export default function Somos() {
         />
       </Link>
       <h2 className={styles.titulo}>QUIÉNES SOMOS</h2>
+      <h2 className={styles.titulo}>OTRO LINK</h2>
     </Layout>
   )
 }
