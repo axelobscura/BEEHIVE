@@ -10,7 +10,7 @@ export default function Somos() {
       <Link href='/'>
         <Image
           src="/images/logo.png"
-          alt="BEEHIVE WORKS | OUTSTANDING TECH"
+          alt="BEEHIVE WORKS | OUTSTANDING TECH | MÉXICO"
           width={500}
           height={142}
           className={styles.shaker}
