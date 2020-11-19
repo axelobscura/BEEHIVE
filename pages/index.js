@@ -5,7 +5,7 @@ import Particles from 'react-particles-js';
 
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+function Home({ profiles, page, pageCount }) {
   return (
     <Layout>
       <Particles 
@@ -29,6 +29,18 @@ export default function Home() {
           }
         }}
       />
+      <ul>
+        {profiles.map((p) => (
+          <li className="profile" key={p.id}>
+            <Link href={`/profile?id=${p.id}`}>
+              <a>
+                <img src={p.avatar} />
+                <span>{p.name}</span>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
       <Link href='/quienes-somos'>
         <Image
           src="/images/logo.png"
@@ -41,3 +53,19 @@ export default function Home() {
     </Layout>
   )
 }
+
+export async function getServerSideProps({ req, query }) {
+  const protocol = req.headers['x-forwarded-proto']
+  const host = req.headers['x-forwarded-host']
+  const page = query.page || 1
+  const limit = query.limit || 9
+
+  const res = await fetch(
+    `${protocol}://${host}/api/profiles?page=${page}&limit=${limit}`
+  )
+  const data = await res.json()
+
+  return { props: data }
+}
+
+export default Home;
