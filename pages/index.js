@@ -35,7 +35,7 @@ function Home({ profiles, page, pageCount }) {
             <Link href={`/profile?id=${p.id}`}>
               <a>
                 <img src={p.avatar} />
-                <span>{p.name}</span>
+                <span>{p.name}...</span>
               </a>
             </Link>
           </li>
