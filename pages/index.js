@@ -44,7 +44,7 @@ function Home({ profiles, page, pageCount }) {
       <Link href='/quienes-somos'>
         <Image
           src="/images/logo.png"
-          alt="BEEHIVE WORKS | OUTSTANDING TECH"
+          alt="BEEHIVE WORKS | OUTSTANDING TECHNOLOGIES"
           width={500}
           height={142}
           className={styles.shaker}
