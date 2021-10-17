@@ -15,7 +15,7 @@ export default function Contacto() {
           height={142}
         />
       </Link>
-      <h2 className={styles.titulo}>CONTACTO</h2>
+      <h2 className={styles.titulo}>CONTACTO:</h2>
     </Layout>
   )
 }
