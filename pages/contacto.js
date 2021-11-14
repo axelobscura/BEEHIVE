@@ -10,7 +10,7 @@ export default function Contacto() {
       <Link href='/'>
         <Image
           src="/images/logo.png"
-          alt="BEEHIVE WORKS | OUTSTANDING TECH"
+          alt="BEEHIVE WORKS    | OUTSTANDING TECH"
           width={500}
           height={142}
         />
